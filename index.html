@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment #3 - Part 2: Bootstrap 5</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <!-- TASK 5: Bootstrap Navigation Bar
+       - Logo/brand
+       - 4 links: Home, About us, Contact, Categories
+       - Collapsible hamburger menu (navbar-toggler) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3 py-2" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">WebDev Lab</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- TASK 7: Bootstrap Carousel (Exactly 9 Slides)
+         - Indicators for all 9 slides
+         - Prev / Next controls
+         - Aligned inside Bootstrap container -->
+    <section class="container my-4" aria-label="Image Carousel Section">
+      <div id="assignmentCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+        <!-- 9 Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#assignmentCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        </div>
+
+        <!-- 9 Carousel Inner Items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="images/10-1200x450.jpg" class="d-block w-100" alt="Nature Vista - Slide 1">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 1: Serene Forest</h5>
+              <p>Explore responsive design patterns.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/11-1200x450.jpg" class="d-block w-100" alt="Lake View - Slide 2">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 2: Calm Waters</h5>
+              <p>Built with Bootstrap 5 components.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/12-1200x450.jpg" class="d-block w-100" alt="Seashore - Slide 3">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 3: Misty Horizon</h5>
+              <p>Flexible image handling and sizing.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/13-1200x450.jpg" class="d-block w-100" alt="Beach - Slide 4">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 4: Ocean Shore</h5>
+              <p>Smooth transitions on slide change.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/14-1200x450.jpg" class="d-block w-100" alt="Rocks - Slide 5">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 5: Coastal Rocks</h5>
+              <p>Responsive across phone, tablet, and desktop.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/15-1200x450.jpg" class="d-block w-100" alt="Waterfall - Slide 6">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 6: Cascading Falls</h5>
+              <p>Seamless sliding effect without lag.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/16-1200x450.jpg" class="d-block w-100" alt="Paths - Slide 7">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 7: Woodland Trail</h5>
+              <p>Optimal visual hierarchy and accessibility.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/17-1200x450.jpg" class="d-block w-100" alt="Meadow - Slide 8">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 8: Rolling Grasslands</h5>
+              <p>Bootstrap 5 carousel indicators and controls.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="images/18-1200x450.jpg" class="d-block w-100" alt="Sunset - Slide 9">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+              <h5>Slide 9: Golden Sunset</h5>
+              <p>Final slide of the carousel component.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Prev / Next Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#assignmentCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#assignmentCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!--  TASK 3 & 4: Bootstrap Grid Layout & Spacing Utilities
+         - Section 1: Two columns (col-12 col-md-6 col-lg-6)
+         - Section 2: Three columns (col-12 col-sm-6 col-lg-4)
+         - Spacing via utility classes (p-*, m-*, mt-lg-4, px-sm-2) -->
+    <div class="container my-5">
+      <!-- Section with 2 Columns -->
+      <section class="mb-5" id="about">
+        <h2 class="h3 text-center mb-4">Task 3 &amp; 4: Responsive Grid (2 Columns)</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="p-4 p-md-5 bg-white rounded shadow-sm border h-100">
+              <h3 class="h4 text-primary mb-3">Modular Layouts</h3>
+              <p class="mb-0 text-secondary">
+                Using Bootstrap's 12-column grid system, content reflows effortlessly. On mobile, this column occupies the full 12 units (`col-12`), while on medium and large viewports it neatly divides the row in half (`col-md-6 col-lg-6`).
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="p-4 p-md-5 bg-white rounded shadow-sm border h-100">
+              <h3 class="h4 text-primary mb-3">Bootstrap Spacing Utilities</h3>
+              <p class="mb-0 text-secondary">
+                Margins and paddings rely exclusively on utility classes such as <code>mb-4</code>, <code>p-4</code>, <code>p-md-5</code>, and <code>g-4</code>, removing the need for custom spacing in external stylesheets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section with 3 Columns -->
+      <section class="mb-5" id="categories">
+        <h2 class="h3 text-center mb-4">Task 3 &amp; 4: Responsive Grid (3 Columns)</h2>
+        <div class="row g-4 mt-lg-4">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100">
+              <h3 class="h5 text-dark mb-2">Column 1</h3>
+              <p class="text-muted mb-0 px-sm-2">
+                Responsive breakpoint configuration adapting from single column on phones to 3 columns on desktop.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100">
+              <h3 class="h5 text-dark mb-2">Column 2</h3>
+              <p class="text-muted mb-0 px-sm-2">
+                Fluid responsiveness utilizing standard Bootstrap flex grid properties and utility gaps.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100">
+              <h3 class="h5 text-dark mb-2">Column 3</h3>
+              <p class="text-muted mb-0 px-sm-2">
+                Consistent gutters and spacing to maintain visual alignment across varying resolutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TASK 6: Bootstrap Buttons
+           - Different styles: btn-primary, btn-outline-secondary, btn-lg, btn-sm
+           - Grouped buttons using .btn-group -->
+      <section class="p-4 p-md-5 bg-white rounded shadow-sm border mb-5">
+        <h2 class="h3 mb-3">Task 6: Bootstrap Buttons &amp; Button Groups</h2>
+        <p class="text-secondary mb-4">Demonstration of various Bootstrap button states, sizes, and grouped interfaces.</p>
+
+        <!-- Individual button variants and sizes -->
+        <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+          <button type="button" class="btn btn-primary btn-lg">Primary Large</button>
+          <button type="button" class="btn btn-secondary">Secondary Normal</button>
+          <button type="button" class="btn btn-outline-secondary">Outline Secondary</button>
+          <button type="button" class="btn btn-success btn-sm">Success Small</button>
+          <button type="button" class="btn btn-outline-danger btn-sm">Danger Small</button>
+        </div>
+
+        <!-- Btn Gr (.btn-group) -->
+        <div class="mt-3">
+          <h3 class="h6 text-muted mb-2">Grouped Controls (.btn-group):</h3>
+          <div class="btn-group" role="group" aria-label="Filter Button Group">
+            <button type="button" class="btn btn-primary active" aria-current="page">All</button>
+            <button type="button" class="btn btn-outline-primary">Design</button>
+            <button type="button" class="btn btn-outline-primary">Code</button>
+            <button type="button" class="btn btn-outline-primary">DevOps</button>
+          </div>
+        </div>
+      </section>
+
+      <!--
+           TASK 8: Bootstrap Cardss
+           - 3 Bootstap cards (.card) inside .row
+           - Each with image, title, text description, and button
+           -->
+      <section class="mb-5">
+        <h2 class="h3 text-center mb-4">Task 8: Bootstrap Cards</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="images/pugcard1.jpg" class="card-img-top" alt="Pug wrapped in blanket">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Front-End Architecture</h3>
+                <p class="card-text text-secondary flex-grow-1">
+                  Mastering semantic markup, modern CSS grid engines, and component libraries for scalable web apps.
+                </p>
+                <a href="#" class="btn btn-primary mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="images/pugcard2.jpg" class="card-img-top" alt="Dog looking forward">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Bootstrap 5 Components</h3>
+                <p class="card-text text-secondary flex-grow-1">
+                  Speeding up delivery with battle-tested responsive navigation bars, modals, cards, and carousel sliders.
+                </p>
+                <a href="#" class="btn btn-outline-secondary mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="images/wallrus.jpg" class="card-img-top" alt="Walrus in nature">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Web Accessibility (a11y)</h3>
+                <p class="card-text text-secondary flex-grow-1">
+                  Ensuring high contrast, accessible ARIA attributes, and keyboard navigability across web elements.
+                </p>
+                <a href="#" class="btn btn-primary mt-3">Read Guidelines</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+           TASK 9: Responsive Form Design
+           - Form controls (.form-control, .form-select)
+           - Checkboxes and radio buttons (.form-check)
+           - Submit button -->
+      <section class="p-4 p-md-5 bg-white rounded shadow-sm border mb-5" id="contact">
+        <h2 class="h3 mb-4 text-center">Task 9: Responsive Contact Form</h2>
+        <form>
+          <div class="row g-3">
+            <!-- Full Name -->
+            <div class="col-12 col-md-6">
+              <label for="fullName" class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="e.g. John Doe" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-12 col-md-6">
+              <label for="emailAddress" class="form-label fw-semibold">Email Address</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+            </div>
+
+            <!-- Department Selection -->
+            <div class="col-12 col-md-6">
+              <label for="departmentSelect" class="form-label fw-semibold">Subject / Department</label>
+              <select class="form-select" id="departmentSelect">
+                <option selected>Select inquiry topic...</option>
+                <option value="1">Assignment Submission</option>
+                <option value="2">Technical Inquiry</option>
+                <option value="3">General Feedback</option>
+              </select>
+            </div>
+
+            <!-- Radio Options (.form-check) -->
+            <div class="col-12 col-md-6">
+              <label class="form-label fw-semibold d-block">Preferred Response Type</label>
+              <div class="form-check form-check-inline mt-1">
+                <input class="form-check-input" type="radio" name="responseType" id="responseEmail" value="email" checked>
+                <label class="form-check-label" for="responseEmail">Email</label>
+              </div>
+              <div class="form-check form-check-inline mt-1">
+                <input class="form-check-input" type="radio" name="responseType" id="responsePhone" value="phone">
+                <label class="form-check-label" for="responsePhone">Phone</label>
+              </div>
+            </div>
+
+            <!-- Message Area -->
+            <div class="col-12">
+              <label for="messageText" class="form-label fw-semibold">Your Message</label>
+              <textarea class="form-control" id="messageText" rows="4" placeholder="Enter your detailed query..." required></textarea>
+            </div>
+
+            <!-- Checkbox (.form-check) -->
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">
+                  I agree to the processing of personal data according to the laboratory rules.
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-12 mt-4 text-end">
+              <button type="submit" class="btn btn-primary px-4 py-2">Submit Message</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!--TASK 10: Semantic Footer with Mandatory Team Details & High Contrast-->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-1 fw-bold">Team Members: [Kilymbai Perizat , Beket Ademi], Group: [SE-2515]</p>
+      <p class="mb-0 text-secondary"><small>&copy; 2026 Astana IT University. All rights reserved xd.</small></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle with Popper CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

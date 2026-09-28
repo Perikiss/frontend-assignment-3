@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment #3 - Part 1: Media Queries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="wrapper">
+      <!-- Task 1: Responsive Typography (H1) -->
+      <h1>Frontend Development: Responsive Layouts</h1>
+      <p class="subtitle">Exploring pure CSS Media Queries without external frameworks.</p>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <!-- Task 1: Responsive Typography Section -->
+    <section class="typography-section">
+      <h2>Task 1: Responsive Typography Demonstration</h2>
+      <p>
+        Media queries allow developers to apply CSS styles depending on device characteristics 
+        such as viewport width. As the screen size shifts between mobile (&lt;600px), 
+        tablet (600px–992px), and desktop (&gt;992px), font sizes for headings and paragraphs 
+        adapt dynamically to preserve readability and optimal line length.
+      </p>
+      <p>
+        Resize your browser window or switch to device emulation mode in DevTools to observe 
+        the typography fluidly scaling across the defined breakpoints.
+      </p>
+    </section>
+
+    <!-- Task 2: Card Group (Responsive Grid/Flexbox with Media Queries) -->
+    <section class="cards-section">
+      <h2>Task 2: Responsive Card Group</h2>
+      <div class="card-group">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="images/1015-600x380.jpg" alt="Mountain Landscape">
+          <div class="card-body">
+            <h3>Responsive Web Design</h3>
+            <p>Technique enabling pages to adapt seamlessly across multiple resolutions, screen orientations, and devices.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="images/1016-600x380.jpg" alt="Canyon View">
+          <div class="card-body">
+            <h3>CSS Media Queries</h3>
+            <p>Module of CSS3 that allows content rendering to adapt to conditions such as viewport width and orientation.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="images/1018-600x380.jpg" alt="Serene Lake">
+          <div class="card-body">
+            <h3>Fluid Layout Systems</h3>
+            <p>Flexible proportions and grid units ensuring components reflow gracefully without overflowing borders.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Task 10: Semantic Footer with Mandatory Team Details -->
+  <footer class="page-footer">
+    <div class="wrapper">
+      <p>Team Members: [Kilymbai Perizat , Beket Ademi], Group: [SE-2515]</p>
+      <p><small>&copy; 2026 Web Technologies Course. All rights reserved xd.</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>
